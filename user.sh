@@ -10,7 +10,7 @@ useradd roboshop
 mkdir /app
 
 cd /app
-npm intsall
+npm install
 
 systemctl daemon-reload
 systemctl enable user

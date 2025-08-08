@@ -3,9 +3,11 @@ dnf module enable nodejs:20 -y
 
 dnf install nodejs -y
 
+cp catalogue.service /etc/systemd/system/catalogue.service
+cp mongo.repo /etc/yum.repos.d/mongo.repo
+
 useradd roboshop
 
-cp catalogue.service /etc/systemd/system/catalogue.service
 
 mkdir /app
 
@@ -19,8 +21,6 @@ npm install
 systemctl daemon-reload
 systemctl enable catalogue
 systemctl restart catalogue
-
-cp mongo.repo /etc/yum.repos.d/mongo.repo
 
 dnf install mongodb-mongosh -y
 

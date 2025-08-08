@@ -1,6 +1,9 @@
+component=shipping
+source common.sh
+
 dnf install maven -y
 
-cp shipping.service /etc/systemd/system/shipping.service
+service_setup
 useradd roboshop
 
 rm -rf /app
@@ -14,9 +17,7 @@ cd /app
 mvn clean package
 mv target/shipping-1.0.jar shipping.jar
 
-systemctl daemon-reload
-systemctl enable shipping
-systemctl restart shipping
+systemctl_setup
 
 dnf install mysql -y
 

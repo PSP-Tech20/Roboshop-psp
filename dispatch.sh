@@ -3,7 +3,7 @@ source common.sh
 
 dnf install golang -y
 
-cp dispatch.service /etc/systemd/system/dispatch.service
+service_setup
 
 useradd roboshop
 

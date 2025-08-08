@@ -1,4 +1,7 @@
-cp rabbitmq.repo /etc/yum.repos.d/rabbitmq.repo
+component=rabbitmq
+source common.sh
+
+repo_setup
 
 dnf install rabbitmq-server -y
 

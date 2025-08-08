@@ -9,7 +9,7 @@ service_setup() {
 }
 
 conf_setup() {
-  cp $(component).conf /etc/nginx/$(component).conf
+  cp $(component).conf /etc/$(component)/$(component).conf
 }
 
 repo_setup() {

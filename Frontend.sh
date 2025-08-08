@@ -1,3 +1,5 @@
+source common.sh
+
 dnf module list nginx
 
 Print_head nginx current version ni disable and kotha version ni enable chestundi

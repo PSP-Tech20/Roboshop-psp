@@ -1,6 +1,6 @@
 dnf install golang -y
 
-cp dispatch.service /etc/systemd/system/disaptach.service
+cp dispatch.service /etc/systemd/system/disapatch.service
 
 useradd roboshop
 
